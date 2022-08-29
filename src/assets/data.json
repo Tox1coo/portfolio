@@ -1,0 +1,36 @@
+{
+	"skills": [
+		{
+			"title": "Vue 3",
+			"imageName": "vue"
+		},
+		{
+			"title": "JavaScript",
+			"imageName": "javascript"
+		},
+		{
+			"title": "HTML 5",
+			"imageName": "html"
+		},
+		{
+			"title": "CSS 3",
+			"imageName": "css"
+		},
+		{
+			"title": "REST API",
+			"imageName": "api"
+		},
+		{
+			"title": "GIT",
+			"imageName": "git"
+		},
+		{
+			"title": "Scss",
+			"imageName": "scss"
+		},
+		{
+			"title": "Responsive",
+			"imageName": "responsive"
+		}
+	]
+}

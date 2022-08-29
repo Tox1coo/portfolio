@@ -1,0 +1,22 @@
+/* eslint-disable no-unused-vars */
+export default {
+	mounted(el, binding) {
+		const options = {
+			rootMargin: '0px',
+			threshold: 0.1
+		}
+		const callback = (entries, observer) => {
+			if (entries[0].isIntersecting) {
+				binding.value();
+				el.classList.add('animation')
+			} else {
+				el.classList.remove('animation')
+			}
+
+		};
+		const observer = new IntersectionObserver(callback, options);
+
+		observer.observe(el);
+	},
+	name: 'intersection'
+}
