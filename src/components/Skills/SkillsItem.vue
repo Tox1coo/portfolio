@@ -6,7 +6,7 @@
       :src="require(`@/assets/${skillsItem.imageName}.png`)"
       alt=""
     />
-    <h3 class="subtitle subtitle--body">{{ skillsItem.title }}</h3>
+    <h3 class="subtitle subtitle--item">{{ skillsItem.title }}</h3>
   </div>
 </template>
 

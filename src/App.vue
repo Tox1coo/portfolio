@@ -2,8 +2,9 @@
   <Header v-once></Header>
   <Contact v-once></Contact>
   <div class="container">
+    <About></About>
     <Skills></Skills>
-    <Skills></Skills>
+    <PortfolioBlock></PortfolioBlock>
   </div>
 </template>
 
@@ -11,8 +12,10 @@
 import Header from "@/components/Header.vue";
 import Contact from "@/components/Contact.vue";
 import Skills from "@/components/Skills/Skills.vue";
+import About from "@/components/About/About.vue";
+import PortfolioBlock from "@/components/Portfolio/PortfolioBlock.vue";
 export default {
-  components: { Header, Contact, Skills },
+  components: { Header, Contact, Skills, About, PortfolioBlock },
 };
 </script>
 
@@ -24,5 +27,6 @@ export default {
   text-align: center;
   color: #2c3e50;
   position: relative;
+  overflow-x: hidden;
 }
 </style>

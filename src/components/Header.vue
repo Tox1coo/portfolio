@@ -24,7 +24,7 @@ export default {
   },
   methods: {
     getDown() {
-      document.getElementById("skills").scrollIntoView({
+      document.getElementById("about").scrollIntoView({
         block: "center",
         inline: "center",
         behavior: "smooth",

@@ -2,15 +2,12 @@
 export default {
 	mounted(el, binding) {
 		const options = {
-			rootMargin: '0px',
-			threshold: 0.1
+			rootMargin: '0px 0px 0px 20px',
+			threshold: 1.0
 		}
 		const callback = (entries, observer) => {
 			if (entries[0].isIntersecting) {
-				binding.value();
-				el.classList.add('animation')
-			} else {
-				el.classList.remove('animation')
+				binding.value(entries[0].isIntersecting);
 			}
 
 		};

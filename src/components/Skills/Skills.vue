@@ -1,9 +1,12 @@
 <template>
+  <div v-intersection="animationScrolling" class="observer"></div>
+
   <div
-    v-intersection="animationScrolling"
+    v-if="isScroll"
+    :class="{ 'animation-left': isScroll }"
     ref="skills"
     id="skills"
-    class="skills"
+    class="block skills"
   >
     <div class="skills__inner">
       <h3 class="subtitle subtitle--body">My Skills</h3>
@@ -17,44 +20,26 @@
     </div>
   </div>
 </template>
-        v-on="{ animationScroll: animationScroll() }"
 
 <script>
-// import animationScroll from "@/mixins/animationScroll";
+import animationScroll from "@/mixins/animationScroll";
 import SkillsItem from "@/components/Skills/SkillsItem.vue";
 import skills from "@/assets/data";
 export default {
   data() {
     return {
       skillsList: skills,
-      isScroll: false,
       scroll: document.documentElement.scrollHeight,
     };
   },
-  /*   mounted() {
-    this.animationScroll();
-  }, */
-  methods: {
-    animationScrolling() {
-      this.isScroll = true;
-    },
-  },
-  // mixins: [animationScroll],
+
+  mixins: [animationScroll],
   components: { SkillsItem },
 };
 </script>
 
 <style lang="scss" scoped>
 .skills {
-  margin-bottom: 50px;
-  visibility: hidden;
-  opacity: 0;
-  &__inner {
-    .subtitle {
-      text-align: left;
-    }
-  }
-
   &__items {
     margin-top: 25px;
 

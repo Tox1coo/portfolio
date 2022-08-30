@@ -1,40 +1,23 @@
 .container {
-	max-width: 1250px;
-	padding: 25px;
-	margin: 0 auto;
-}
+	max-width: 1450px;
+	padding: 0px 25px;
 
-.title {
-	color: $colorTitle;
-	font-weight: 700;
-	text-transform: uppercase;
-	letter-spacing: 5px;
-	font-size: 40px;
-	font-family: 'Roboto Mono';
-}
-.subtitle {
-	font-size: 20px;
-	color: $colorSubtitle;
-	text-transform: uppercase;
-	font-family: 'monospace';
-	&--body {
-		color: $colorSubtitleBody
-	}
+	margin: 0 auto;
 }
 
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 html {
-	&::-webkit-scrollbar{
-		width: 5px;
+	&::-webkit-scrollbar {
+		width: 7px;
 		&-thumb {
-			background-color: #000;
+			background-color: #161616;
 			border-radius: 50px;
 		}
 		&-track {
@@ -44,15 +27,64 @@ html {
 	}
 }
 
+.title {
+	color: $colorTitle;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-size: 40px;
+	font-family: "Roboto Mono";
+}
+.subtitle {
+	font-size: 20px;
+	color: $colorSubtitle;
+	text-transform: uppercase;
+	font-family: "monospace";
+	overflow: hidden;
 
-.animation {
-  visibility: visible !important;
-  opacity: 1 !important;
-	animation: scroll 2s ease-in-out;
-	position: relative;
+	&--body {
+		font-size: 45px;
+		font-style: italic;
+		color: $colorSubtitleBody;
+		position: relative;
+		width: fit-content;
+		margin: 0 auto;
+		&::after {
+			content: "";
+			display: block;
+			height: 3px;
+			width: 100%;
+			position: absolute;
+			background-color: $colorSubtitleBody;
+			bottom: 0px;
+			animation: subtitle-animation 2s linear infinite;
+		}
+	}
+	&--item {
+		font-size: 22px;
+		color: $colorSubtitleBody;
+	}
+}
+.text {
+	font-size: 25px;
+	font-family: "monospace";
+	line-height: 1.2;
+}
+.observer {
+	height: 10px;
 }
 
-@keyframes scroll {
+.animation {
+	animation: scroll1 1.2s ease-in;
+	&-left {
+		animation: scroll2 1.2s ease-in;
+	}
+}
+
+.block {
+	margin-top: 25px;
+}
+@keyframes scroll1 {
 	from {
 		opacity: 0;
 		transform: translateY(-100%);
@@ -62,6 +94,39 @@ html {
 		opacity: 1;
 		transform: translateY(0);
 		z-index: 1;
-
+	}
+}
+@keyframes scroll2 {
+	from {
+		transform: translateX(-100%);
+	}
+	to {
+		transform: translateX(0%);
+	}
+}
+@keyframes subtitle-animation {
+	0% {
+		left: 0;
+		width: 0;
+	}
+	25% {
+		width: 100%;
+		left: 5%;
+	}
+	25% {
+		width: 100%;
+		left: 25%;
+	}
+	50% {
+		width: 70%;
+		left: 50%;
+	}
+	75% {
+		width: 50%;
+		left: 70%;
+	}
+	100% {
+		width: 0%;
+		left: 100%;
 	}
 }

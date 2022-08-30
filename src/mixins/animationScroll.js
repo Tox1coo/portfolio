@@ -7,8 +7,8 @@ export default {
 	},
 
 	methods: {
-		animationScroll(name) {
-			window.addEventListener('scroll', (event) => {
+		animationScrolling() {
+			/* window.addEventListener('scroll', (event) => {
 				let { top, bottom } = element.getBoundingClientRect();
 				let height = document.documentElement.clientHeight;
 				if (window.scrollY + height / 2 >= top) {
@@ -19,9 +19,9 @@ export default {
 
 
 			})
-			let element = document.querySelector('h3');
+			let element = document.querySelector('h3'); */
 
-
+			this.isScroll = true;
 		}
 	}
 }
