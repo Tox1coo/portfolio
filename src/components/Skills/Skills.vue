@@ -1,22 +1,13 @@
 <template>
-  <div v-intersection="animationScrolling" class="observer"></div>
-
-  <div
-    v-if="isScroll"
-    :class="{ 'animation-left': isScroll }"
-    ref="skills"
-    id="skills"
-    class="block skills"
-  >
-    <div class="skills__inner">
-      <h3 class="subtitle subtitle--body">My Skills</h3>
-      <div v-show="isScroll" class="skills__items">
-        <SkillsItem
-          v-for="skillsItem in skillsList.skills"
-          :key="skillsItem.title"
-          :skillsItem="skillsItem"
-        ></SkillsItem>
-      </div>
+  <div ref="skills" id="skills" class="block skills animation">
+    <h3 class="subtitle subtitle--body">My Skills</h3>
+    <div class="skills__items">
+      <SkillsItem
+        class="animation"
+        v-for="skillsItem in skillsList.skills"
+        :key="skillsItem.title"
+        :skillsItem="skillsItem"
+      ></SkillsItem>
     </div>
   </div>
 </template>
@@ -32,7 +23,11 @@ export default {
       scroll: document.documentElement.scrollHeight,
     };
   },
-
+  mounted() {
+    setTimeout(() => {
+      this.animationScrolling(this.$refs.skills);
+    }, 500);
+  },
   mixins: [animationScroll],
   components: { SkillsItem },
 };
@@ -42,7 +37,6 @@ export default {
 .skills {
   &__items {
     margin-top: 25px;
-
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;

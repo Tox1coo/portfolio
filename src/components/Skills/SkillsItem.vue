@@ -1,5 +1,5 @@
 <template>
-  <div class="skills__item">
+  <div class="skills__item animation-show">
     <img
       width="70"
       height="70"

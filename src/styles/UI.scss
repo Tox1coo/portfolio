@@ -49,6 +49,9 @@ html {
 		position: relative;
 		width: fit-content;
 		margin: 0 auto;
+		transition: all 0.8s ease 0.4s;
+		transform: translate(0px, -120%);
+		opacity: 0;
 		&::after {
 			content: "";
 			display: block;
@@ -69,41 +72,35 @@ html {
 	font-size: 25px;
 	font-family: "monospace";
 	line-height: 1.2;
+	&--card {
+		font-size: 1.9em;
+		letter-spacing: 1.2px;
+	}
 }
 .observer {
 	height: 10px;
 }
-
-.animation {
-	animation: scroll1 1.2s ease-in;
-	&-left {
-		animation: scroll2 1.2s ease-in;
+.animation-show {
+	transition: all 0.8s ease 0s;
+	transform: translate(-120%, 0px);
+	opacity: 0;
+}
+.animation-show.aniamtion-active,
+.animation-active.animation-show {
+	transform: translate(0px, 0px);
+	opacity: 1;
+}
+.animation-active {
+	& .subtitle--body {
+		transform: translate(0px, 0px);
+		opacity: 1;
 	}
 }
-
 .block {
+	overflow: hidden;
 	margin-top: 25px;
 }
-@keyframes scroll1 {
-	from {
-		opacity: 0;
-		transform: translateY(-100%);
-		z-index: -50;
-	}
-	to {
-		opacity: 1;
-		transform: translateY(0);
-		z-index: 1;
-	}
-}
-@keyframes scroll2 {
-	from {
-		transform: translateX(-100%);
-	}
-	to {
-		transform: translateX(0%);
-	}
-}
+
 @keyframes subtitle-animation {
 	0% {
 		left: 0;

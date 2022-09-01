@@ -32,5 +32,81 @@
 			"title": "Responsive",
 			"imageName": "responsive"
 		}
+	],
+	"portfolio": [
+		{
+			"title": "LearnLang",
+			"type": "websites",
+			"text": "Данный проект создавался для помощи в самостоятельном изучении языков, там предусмотрены карточки, словарь с прогрессом слов и тестирование. Проект был сделан мной для повседневного пользования мной и моих знакомых",
+			"info": {
+				"infoTitle": "Проект был создан с помощью следующих технологий: ",
+				"structure": [
+					"Яндекс.Словарь API",
+					"Vue 3",
+					"VueX",
+					"Vuex Router",
+					"SaSS",
+					"БД Firebase",
+					"axios"
+				],
+				"linkGit": "https://github.com/Tox1coo/learnlang-tox",
+				"linkSite": "https://tox1coo.github.io/learnlang-tox/"
+			},
+			"imageName": "learnlang"
+		},
+		{
+			"title": "toxMovies",
+			"type": "websites",
+			"text": "Данный проект предназначен для поиска информации о фильмах, сериалах, аниме, актерах и т.д., а так же для просмотра фото, видео и трейлеров.",
+			"info": {
+				"infoTitle": "Проект был создан с помощью следующих технологий: ",
+				"structure": [
+					"TMBD API",
+					"Vue 3",
+					"VueX",
+					"Vuex Router",
+					"SaSS",
+					"axios"
+				],
+				"linkGit": "https://github.com/Tox1coo/toxMovies",
+				"linkSite": "https://tox1coo.github.io/toxMovies/"
+			},
+			"imageName": "toxmovies"
+		},
+		{
+			"title": "PizzaRes",
+			"type": "websites",
+			"text": "Данный проект прелставляет собой сайт пиццерии, где ты можешь посмотреть историю заказа, информацию о бонусах и о себе, и заказать что-нибудь поесть.",
+			"info": {
+				"infoTitle": "Проект был создан с помощью следующих технологий: ",
+				"structure": [
+					"Vue 3",
+					"VueX",
+					"Vuex Router",
+					"SaSS",
+					"БД Firebase"
+				],
+				"linkGit": "https://github.com/Tox1coo/pizzares",
+				"linkSite": "https://tox1coo.github.io/pizzares/"
+			},
+			"imageName": "pizzares"
+		},
+		{
+			"title": "TelegramSpeechBot",
+			"type": "bot",
+			"text": "Данный телеграм бот работает локально на компьютере и управляется с помощью голосового управления. С помощью него можно включать браузер, ютуб, стим, дискорд, вк, выключать пк и перезагружать пк",
+			"info": {
+				"infoTitle": "Проект был создан с помощью следующих технологий: ",
+				"structure": [
+					"Yandex.Speech",
+					"Node js",
+					"TelegramBot APi",
+					"Vuex Router",
+					"SaSS"
+				],
+				"linkGit": "https://github.com/Tox1coo/telegram-speech-bot"
+			},
+			"imageName": "speechbot"
+		}
 	]
 }

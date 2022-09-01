@@ -63,6 +63,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 5px;
+  z-index: 1000;
   &__text {
     writing-mode: vertical-lr;
     color: #fff;
