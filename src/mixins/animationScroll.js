@@ -34,7 +34,6 @@ export default {
 
 			function animOnScroll() {
 				for (let index = 0; index < animationItems.length; index++) {
-					console.log(animationItems);
 					const animItem = animationItems[index];
 					const animItemHeight = animItem.offsetHeight
 					const animItemOffset = getOffset(animItem).top;

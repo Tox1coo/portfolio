@@ -100,11 +100,11 @@
 				"structure": [
 					"Yandex.Speech",
 					"Node js",
-					"TelegramBot APi",
-					"Vuex Router",
-					"SaSS"
+					"TelegramBot APi"
 				],
-				"linkGit": "https://github.com/Tox1coo/telegram-speech-bot"
+				"linkGit": "https://github.com/Tox1coo/telegram-speech-bot",
+				"linkSite": ""
+
 			},
 			"imageName": "speechbot"
 		}

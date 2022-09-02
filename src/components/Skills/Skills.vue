@@ -41,6 +41,10 @@ export default {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 20px 10%;
+    @media (max-width: 800px) {
+      justify-content: center;
+      align-items: center;
+    }
   }
 }
 </style>

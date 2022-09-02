@@ -1,3 +1,4 @@
+/* Системные */
 .container {
 	max-width: 1450px;
 	padding: 0px 25px;
@@ -26,7 +27,7 @@ html {
 		}
 	}
 }
-
+/* Тексты */
 .title {
 	color: $colorTitle;
 	font-weight: 700;
@@ -62,6 +63,9 @@ html {
 			bottom: 0px;
 			animation: subtitle-animation 2s linear infinite;
 		}
+		@media (max-width: 700px) {
+			font-size: 30px;
+		}
 	}
 	&--item {
 		font-size: 22px;
@@ -77,9 +81,7 @@ html {
 		letter-spacing: 1.2px;
 	}
 }
-.observer {
-	height: 10px;
-}
+/* Анимации */
 .animation-show {
 	transition: all 0.8s ease 0s;
 	transform: translate(-120%, 0px);
@@ -96,11 +98,6 @@ html {
 		opacity: 1;
 	}
 }
-.block {
-	overflow: hidden;
-	margin-top: 25px;
-}
-
 @keyframes subtitle-animation {
 	0% {
 		left: 0;
@@ -125,5 +122,51 @@ html {
 	100% {
 		width: 0%;
 		left: 100%;
+	}
+}
+
+/* блок */
+.block {
+	overflow: hidden;
+	margin-top: 25px;
+}
+
+/* Кнопка */
+%pseudo {
+	content: "";
+	display: block;
+	position: absolute;
+	visibility: hidden;
+	opacity: 0;
+	transform: translate(-100%, 0);
+	width: 100%;
+	height: 100%;
+	background-color: rgba(#ccc, 0.5);
+	transition: all 0.4s ease 0s;
+	top: 0;
+	left: 0;
+}
+.btn {
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	overflow: hidden;
+	background-color: transparent;
+	backdrop-filter: blur(5px);
+	font-size: 18px;
+	text-decoration: none;
+	color: #000;
+	transition: background-color 0.2s ease;
+	position: relative;
+	&::before {
+		@extend %pseudo;
+		z-index: -1;
+	}
+	&:hover {
+		&::before {
+			visibility: visible;
+			opacity: 1;
+			transform: translate(0, 0);
+		}
 	}
 }
